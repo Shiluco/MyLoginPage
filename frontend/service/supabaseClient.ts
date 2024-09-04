@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseKey = process.env.SUPABASE_KEY;
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 
-//エラーハンドリング
+// エラーハンドリング
 if (!supabaseUrl) {
   throw new Error("Supabase URL is not defined.");
 }
@@ -12,5 +12,3 @@ if (!supabaseKey) {
 }
 
 export const supabase = createClient(supabaseUrl, supabaseKey);
-
-

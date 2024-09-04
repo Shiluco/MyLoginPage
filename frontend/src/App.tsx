@@ -1,10 +1,11 @@
 
 import './App.css'
+import AuthView from './components/AuthView';
 
 
 function App() {
   return <>
-    <h1>hello</h1>
+    <AuthView/>
   </>;
 }
 
